@@ -1,4 +1,4 @@
-package src.com.arpit.Framework.base;
+package base;
 
 public enum BrowserType {
     CHROME,

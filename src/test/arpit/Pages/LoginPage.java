@@ -1,9 +1,9 @@
-package src.test.arpit.Pages;
+package arpit.Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import src.com.arpit.Framework.base.BasePage;
+import base.BasePage;
 
 public class LoginPage extends BasePage {
 
@@ -24,7 +24,6 @@ public class LoginPage extends BasePage {
         userName.sendKeys(uName);
         password.sendKeys(pass);
         loginButton.submit();
-//        return new LoginPage();
         return GetInstance(EmployeeListPage.class);
     }
 }

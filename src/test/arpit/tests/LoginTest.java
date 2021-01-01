@@ -1,15 +1,16 @@
+package arpit.tests;
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import src.com.arpit.Framework.base.BrowserType;
-import src.com.arpit.Framework.base.DriverContext;
-import src.com.arpit.Framework.base.FrameworkInitialize;
-import src.test.arpit.Pages.EmployeeListPage;
-import src.test.arpit.Pages.HomePage;
-import src.test.arpit.Pages.LoginPage;
+import base.BrowserType;
+import base.DriverContext;
+import base.FrameworkInitialize;
+import arpit.Pages.EmployeeListPage;
+import arpit.Pages.HomePage;
+import arpit.Pages.LoginPage;
 
 public class LoginTest extends FrameworkInitialize {
-
 
     @BeforeTest
     public void setup() {

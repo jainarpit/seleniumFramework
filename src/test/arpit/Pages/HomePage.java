@@ -1,9 +1,9 @@
-package src.test.arpit.Pages;
+package arpit.Pages;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import src.com.arpit.Framework.base.BasePage;
+import base.BasePage;
 
 public class HomePage extends BasePage {
 
