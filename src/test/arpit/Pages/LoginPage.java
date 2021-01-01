@@ -20,9 +20,11 @@ public class LoginPage extends BasePage {
     public WebElement loginButton;
 
 
-    public void loginWithUserCreds(String uName, String pass) {
+    public EmployeeListPage loginWithUserCreds(String uName, String pass) {
         userName.sendKeys(uName);
         password.sendKeys(pass);
         loginButton.submit();
+//        return new LoginPage();
+        return GetInstance(EmployeeListPage.class);
     }
 }
