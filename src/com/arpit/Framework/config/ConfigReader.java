@@ -1,5 +1,7 @@
 package config;
 
+import base.BrowserType;
+
 import java.io.IOException;
 import java.util.Properties;
 
@@ -15,5 +17,6 @@ public class ConfigReader {
         properties.load(getClass().getResourceAsStream("GlobalConfig.properties"));
         Settings.appURL = properties.getProperty("ApplicationURL");
         Settings.logPath = properties.getProperty("LogPath");
+        Settings.browserType = BrowserType.valueOf(properties.getProperty("Browser"));
     }
 }

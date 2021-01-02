@@ -24,7 +24,7 @@ public class LoginTest extends FrameworkInitialize {
         LogUtils log = new LogUtils();
         log.createLogFile();
         log.writeLog("Framework Initialized");
-        initializeBrowser(BrowserType.CHROME);
+        initializeBrowser(Settings.browserType);
         DriverContext.Browser.GoToURL(Settings.appURL);
         try {
             ExcelUtil util = new ExcelUtil("/Users/arpit/Documents/SelfLearning/SeleniumFrameworkSetup/seleniumFramework/data.xls");
