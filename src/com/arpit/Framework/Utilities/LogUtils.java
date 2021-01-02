@@ -1,5 +1,7 @@
 package Utilities;
 
+import config.Settings;
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -21,7 +23,8 @@ public class LogUtils {
     private BufferedWriter bufferedWriter = null;
 
     public void createLogFile() {
-        String path = "./LogFolder/";
+        String path = Settings.logPath;
+//        String path = "./LogsFolder/";
         try {
             File dir = new File(path);
             if (!dir.exists())

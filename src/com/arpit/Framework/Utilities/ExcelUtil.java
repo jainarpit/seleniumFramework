@@ -17,7 +17,6 @@ public class ExcelUtil {
     //Create a Constructor
     public ExcelUtil(String ExcelSheetPath) throws BiffException, IOException {
         //Initialize
-        System.out.println(ExcelSheetPath);
         wrkbook = Workbook.getWorkbook(new File(ExcelSheetPath));
         //For Demo purpose the excel sheet name is hardcoded, but not recommended :)
 

@@ -8,19 +8,24 @@ import arpit.Pages.LoginPage;
 import base.BrowserType;
 import base.DriverContext;
 import base.FrameworkInitialize;
+import config.ConfigReader;
+import config.Settings;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class LoginTest extends FrameworkInitialize {
 
     @BeforeTest
-    public void setup() {
+    public void setup() throws IOException {
+        ConfigReader.PopulateSettings();
         LogUtils log = new LogUtils();
         log.createLogFile();
         log.writeLog("Framework Initialized");
         initializeBrowser(BrowserType.CHROME);
-        DriverContext.Browser.GoToURL("http://eaapp.somee.com/");
+        DriverContext.Browser.GoToURL(Settings.appURL);
         try {
             ExcelUtil util = new ExcelUtil("/Users/arpit/Documents/SelfLearning/SeleniumFrameworkSetup/seleniumFramework/data.xls");
         } catch (Exception e) {
