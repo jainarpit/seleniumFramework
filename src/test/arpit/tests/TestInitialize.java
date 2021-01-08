@@ -9,15 +9,17 @@ import config.Settings;
 import org.testng.annotations.BeforeTest;
 
 import java.io.IOException;
+import java.util.Set;
 
 public class TestInitialize extends FrameworkInitialize {
     @BeforeTest
     public void setup() throws IOException {
         ConfigReader.PopulateSettings();
-        LogUtils log = new LogUtils();
-        log.createLogFile();
-        log.writeLog("Framework Initialized");
+        Settings.logs = new LogUtils();
+        Settings.logs.createLogFile();
+        Settings.logs.writeLog("Framework Initialized");
         initializeBrowser(Settings.browserType);
+        Settings.logs.writeLog("Browser is " + Settings.browserType);
         DriverContext.Browser.GoToURL(Settings.appURL);
         try {
             ExcelUtil util = new ExcelUtil("/Users/arpit/Documents/SelfLearning/SeleniumFrameworkSetup/seleniumFramework/data.xls");

@@ -43,7 +43,8 @@ public class LogUtils {
     public void writeLog(String message) {
         try {
             bufferedWriter.write(message);
-            bufferedWriter.close();
+            bufferedWriter.newLine();
+            bufferedWriter.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
